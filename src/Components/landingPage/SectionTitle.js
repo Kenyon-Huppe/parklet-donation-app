@@ -3,9 +3,13 @@ import React from 'react'
 import classes from '../../CSS/landing.module.css'
 
 
-const SectionTitle = () => {
+const SectionTitle = ({ titleName }) => {
     return (
-        <div>SectionTitle</div>
+        <div>
+            <h3>
+                {titleName}
+            </h3>
+        </div>
     )
 }
 

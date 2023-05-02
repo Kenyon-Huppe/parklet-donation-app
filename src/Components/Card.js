@@ -1,10 +1,15 @@
 // This Card houses various information such as links 
 import React from 'react'
-import classes from '../CSS/card.module.css'
+import SectionTitle from './landingPage/SectionTitle'
+import classes from '../CSS/landing.module.css'
 
-const Card = () => {
+const Card = ({ imageLink, cardTitle, cardText }) => {
     return (
-        <div>Card</div>
+        <div className={classes.card}>
+            <img src={imageLink} alt="Image-Link" />
+            <SectionTitle className={classes.cardSectionTitle}>{cardTitle}</SectionTitle>
+            <p className={classes.cardText}>{cardText}</p>
+        </div>
     )
 }
 
@@ -12,5 +17,3 @@ export default Card
 
 
 // todo add 'History' information
-
-// lala jerma time
