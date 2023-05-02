@@ -4,7 +4,10 @@ import classes from '../../CSS/landing.module.css'
 
 const Header = () => {
     return (
-        <div>Header</div>
+        <div className={classes.header}>
+            <img src={require('../../images/UDK-logo.png')} alt="Logo" className={classes.logo} />
+            <button className={`${classes.btn} ${classes.donateBtn}`}>Donate</button>
+        </div>
     )
 }
 
