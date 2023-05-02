@@ -1,5 +1,7 @@
 // title for the project - goes under banner img
 import React from 'react'
+import classes from '../../CSS/landing.module.css'
+
 
 const ProjectName = () => {
     return (
