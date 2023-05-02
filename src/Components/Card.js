@@ -12,3 +12,5 @@ export default Card
 
 
 // todo add 'History' information
+
+// lala jerma time
