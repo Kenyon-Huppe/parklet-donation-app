@@ -1,16 +1,6 @@
-* {
-  --primary-red: rgb(155,31,34);
-  --primary-brown: rgb(123, 107, 93);
-  --primary-white: rgb(255,255,255);
-  --primary-font: font-family: "Poppins", sans-serif;
-
-}
-
 .App {
   text-align: center;
-  
 }
-
 
 .App-logo {
   height: 40vmin;
@@ -37,7 +27,6 @@
 .App-link {
   color: #61dafb;
 }
-
 
 @keyframes App-logo-spin {
   from {

@@ -1,7 +1,6 @@
 // the top of the site (likely fixed positioning for CSS)
 import React from 'react'
-// import { useNavigate } from 'react-router-dom'
-import classes from '../../CSS/landing.module.css'
+import classes from '../../CSS/header.module.css'
 
 
 const Header = ({ homePageLink, donationPageLink }) => {
@@ -18,3 +17,5 @@ const Header = ({ homePageLink, donationPageLink }) => {
 }
 
 export default Header
+
+// todo add logo + 'Donate' btn
