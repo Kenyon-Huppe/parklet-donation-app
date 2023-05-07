@@ -10,8 +10,6 @@ import instagramIcon from './images/instagram.svg'
 
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import DonationPageData from './Components/donationPage/DonationPageData';
-import DonationForm from './Components/donationPage/DonationForm'
-import CustomDonation from './Components/donationPage/CustomDonation'
 
 
 function App() {
@@ -27,14 +25,6 @@ function App() {
     navigate('/donation');
   }
 
-  const donationFormLink = () => {
-    navigate('/donation/donation-form');
-  }
-
-  const customDonationlink = () => {
-    navigate('/donation/custom-donation');
-  }
-
   // holds data for landing page
   const homePage = <div className="App">
     <section className={classes.bannerSection}>
@@ -44,6 +34,7 @@ function App() {
     </section>
     <section className={classes.projectSection}>
       <SectionTitle titleName={'About the Parklet'}></SectionTitle>
+      <hr></hr>
       <p>
         To help fund the renovation of The Parklet on the Ave., we invite you to become a part of this exciting project and join us in making a difference in our community. Your support will be acknowledged with a wooden floor-board personalized with a custom quote by you (of up to 80 words), showcasing your commitment to the parklet's continued success and making your mark on the U-District.
       </p>
@@ -57,9 +48,9 @@ function App() {
       <SectionTitle titleName={'Parklet History'}></SectionTitle>
       <div className={classes.cardHolder}>
         {/* !!!!!!! TODO PUT IN CORRECT IMAGES!!!!!!! */}
-        <Card imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardTitle={'Original Kickstarter'} cardText={'The kickstarter campaign that started it all!'} pageLink={''}></Card>
-        <Card imageLink={require('./images/UDK-parklet-dedication.jpg')} cardTitle={'Parklet Dedication'} cardText={'Original dedication of parklet (May 2015)'} pageLink={''}></Card>
-        <Card imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardTitle={'Construction Timelapse'} cardText={'Short timelapse video of the parklet construction'} pageLink={''}></Card>
+        <Card imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardTitle={'Original Kickstarter'} cardText={'The kickstarter campaign that started it all!'}></Card>
+        <Card imageLink={require('./images/UDK-parklet-dedication.jpg')} cardTitle={'Parklet Dedication'} cardText={'Original dedication of parklet (May 2015)'}></Card>
+        <Card imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardTitle={'Construction Timelapse'} cardText={'Short timelapse video of the parklet construction'}></Card>
       </div>
     </section>
     <section className={classes.footerSection}>
@@ -117,11 +108,7 @@ function App() {
         {/* home */}
         <Route path='/' element={homePage} exact></Route>
         {/* donation */}
-        <Route path='/donation' element={<DonationPageData donationFormLink={donationFormLink} customDonationlink={customDonationlink}></DonationPageData>} exact></Route>
-        {/* donation form */}
-        <Route path='/donation/donation-form' element={<DonationForm></DonationForm>} exact></Route>
-        {/* custom donation */}
-        <Route path='/donation/custom-donation' element={<CustomDonation></CustomDonation>} exact></Route>
+        <Route path='/donation' element={<DonationPageData homePageLink={homePageLink} donationPageLink={donationPageLink}></DonationPageData>} exact></Route>
       </Routes>
     </div>
   );

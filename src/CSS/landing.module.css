@@ -15,7 +15,17 @@ div.header {
     margin-bottom: 20px;
 }
 
+.title{
+    width: 100%;
+}
+
+.bannerImg {
+    width: 65%;
+    margin-bottom: 20px;
+}
+
 .logo {
+
     width: 110px;
     float: left;
     margin-left: 70px;
@@ -41,7 +51,10 @@ div.buttonNav {
     float: right;
 }
 
+.titleName {
+    font-size: 100px;
+}
 
 hr {
-
+    width: 40%;
 }

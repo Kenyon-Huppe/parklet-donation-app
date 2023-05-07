@@ -11,6 +11,7 @@ const Header = ({ }) => {
             <Link to='/'>
                 <img src={require('../../images/UDK-logo.png')} alt="Logo" className={classes.logo} />
             </Link>
+            
             <Link to='/donation'>
                 <div className={classes.buttonNav}>
                     <button className={`${classes.btn} ${classes.donateBtn}`} >Donate</button>

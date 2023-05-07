@@ -6,9 +6,9 @@ import classes from '../../CSS/landing.module.css'
 const SectionTitle = ({ titleName }) => {
     return (
         <div>
-            <h3>
+            <h1>
                 {titleName}
-            </h3>
+            </h1>
         </div>
     )
 }
