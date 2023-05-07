@@ -43,8 +43,9 @@ function App() {
         <p className={classes.projectGoal}>
           So, what are you waiting for? Donate today and be a part of something truly special. Your name will forever be associated with the parklet on the Ave, a testament to your dedication to the community and its public spaces. Thank you for your support!
         </p>
-      <img src={require('./images/UDK-project.jpg')} alt='Parklet-Project-Img' className={classes.parkletImg} />
+      {/* <img src={require('./images/UDK-project.jpg')} alt='Parklet-Project-Img' className={classes.parkletImg} /> */}
     </section>
+    <img src={require('./images/UDK-project.jpg')} alt='Parklet-Project-Img' className={classes.parkletImg} />
     <section className={classes.historySection}>
       {/* <SectionTitle titleName={'Parklet History'}></SectionTitle> */}
       <div className={classes.cardHolder}>

@@ -3,7 +3,6 @@
     --primary-red: rgb(155,31,34);
     --primary-brown: rgb(123, 107, 93);
     --primary-white: rgb(255,255,255);
-    --primary-font: font-family: "Poppins", sans-serif;
 
 }
 
@@ -43,8 +42,8 @@ div.header {
     margin-right: 100px;
     margin-top: 40px;
     display: inline-block;
-    font-size: 24px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-family: Garamond, serif;
     font-weight: 600;
 }
 div.buttonNav {
@@ -53,28 +52,30 @@ div.buttonNav {
 
 
 .titleUnderline {
-    width: 40%;
-    float: left;
-    margin-left: 60px;
+    width: 50%;
+    align-items: center;
 }
 
 .titleName {
-    font-size: 30px;
-    width: 50%;
+    font-size: 35px;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-family: Garamond, serif;
+
 }
 
 .projectGoal {
-    font-family: 'Poppins', sans-serif;
+    font-family: Garamond, serif;
     font-size: 20px;
     font-weight: 500;
-    width: 50%;
     margin-right: 10px;
     margin-left: 30px;
     color: #7B6B5D;
 }
 
 .projectSection {
-    width: 100%;
+    width: 50%;
+    text-align: center;
 }
 
 
