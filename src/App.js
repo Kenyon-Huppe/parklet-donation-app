@@ -117,11 +117,11 @@ function App() {
         {/* home */}
         <Route path='/' element={homePage} exact></Route>
         {/* donation */}
-        <Route path='/donation' element={<DonationPageData homePageLink={homePageLink} donationPageLink={donationPageLink} donationFormLink={donationFormLink} customDonationlink={customDonationlink}></DonationPageData>} exact></Route>
+        <Route path='/donation' element={<DonationPageData donationFormLink={donationFormLink} customDonationlink={customDonationlink}></DonationPageData>} exact></Route>
         {/* donation form */}
-        <Route path='/donation/donation-form' element={<DonationForm homePageLink={homePageLink} donationPageLink={donationPageLink}></DonationForm>} exact></Route>
+        <Route path='/donation/donation-form' element={<DonationForm></DonationForm>} exact></Route>
         {/* custom donation */}
-        <Route path='/donation/custom-donation' element={<CustomDonation homePageLink={homePageLink} donationPageLink={donationPageLink}></CustomDonation>} exact></Route>
+        <Route path='/donation/custom-donation' element={<CustomDonation></CustomDonation>} exact></Route>
       </Routes>
     </div>
   );
