@@ -10,6 +10,8 @@ import instagramIcon from './images/instagram.svg'
 
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import DonationPageData from './Components/donationPage/DonationPageData';
+import DonationForm from './Components/donationPage/DonationForm'
+import CustomDonation from './Components/donationPage/CustomDonation'
 
 
 function App() {
@@ -23,6 +25,14 @@ function App() {
   // function navigates to donation page
   const donationPageLink = () => {
     navigate('/donation');
+  }
+
+  const donationFormLink = () => {
+    navigate('/donation/donation-form');
+  }
+
+  const customDonationlink = () => {
+    navigate('/donation/custom-donation');
   }
 
   // holds data for landing page
@@ -47,9 +57,9 @@ function App() {
       <SectionTitle titleName={'Parklet History'}></SectionTitle>
       <div className={classes.cardHolder}>
         {/* !!!!!!! TODO PUT IN CORRECT IMAGES!!!!!!! */}
-        <Card imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardTitle={'Original Kickstarter'} cardText={'The kickstarter campaign that started it all!'}></Card>
-        <Card imageLink={require('./images/UDK-parklet-dedication.jpg')} cardTitle={'Parklet Dedication'} cardText={'Original dedication of parklet (May 2015)'}></Card>
-        <Card imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardTitle={'Construction Timelapse'} cardText={'Short timelapse video of the parklet construction'}></Card>
+        <Card imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardTitle={'Original Kickstarter'} cardText={'The kickstarter campaign that started it all!'} pageLink={''}></Card>
+        <Card imageLink={require('./images/UDK-parklet-dedication.jpg')} cardTitle={'Parklet Dedication'} cardText={'Original dedication of parklet (May 2015)'} pageLink={''}></Card>
+        <Card imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardTitle={'Construction Timelapse'} cardText={'Short timelapse video of the parklet construction'} pageLink={''}></Card>
       </div>
     </section>
     <section className={classes.footerSection}>
@@ -107,7 +117,11 @@ function App() {
         {/* home */}
         <Route path='/' element={homePage} exact></Route>
         {/* donation */}
-        <Route path='/donation' element={<DonationPageData homePageLink={homePageLink} donationPageLink={donationPageLink}></DonationPageData>} exact></Route>
+        <Route path='/donation' element={<DonationPageData homePageLink={homePageLink} donationPageLink={donationPageLink} donationFormLink={donationFormLink} customDonationlink={customDonationlink}></DonationPageData>} exact></Route>
+        {/* donation form */}
+        <Route path='/donation/donation-form' element={<DonationForm homePageLink={homePageLink} donationPageLink={donationPageLink}></DonationForm>} exact></Route>
+        {/* custom donation */}
+        <Route path='/donation/custom-donation' element={<CustomDonation homePageLink={homePageLink} donationPageLink={donationPageLink}></CustomDonation>} exact></Route>
       </Routes>
     </div>
   );
