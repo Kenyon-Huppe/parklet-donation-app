@@ -1,7 +1,7 @@
 import './App.css';
 
 import Header from './Components/landingPage/Header';
-import SectionTitle from './Components/landingPage/SectionTitle';
+// import SectionTitle from './Components/landingPage/SectionTitle';
 import classes from './CSS/landing.module.css'
 import Card from './Components/Card'
 import facebookIcon from './images/facebook.svg'
@@ -33,19 +33,20 @@ function App() {
       <img src={require('./images/UDK-parklet-name.png')} alt="Partlet-on-the-Ave" className={classes.title} />
     </section>
     <section className={classes.projectSection}>
-      <SectionTitle titleName={'About the Parklet'}></SectionTitle>
-      <hr></hr>
-      <p>
-        To help fund the renovation of The Parklet on the Ave., we invite you to become a part of this exciting project and join us in making a difference in our community. Your support will be acknowledged with a wooden floor-board personalized with a custom quote by you (of up to 80 words), showcasing your commitment to the parklet's continued success and making your mark on the U-District.
-      </p>
-      <p>
-        So, what are you waiting for? Donate today and be a part of something truly special. Your name will forever be associated with the parklet on the Ave, a testament to your dedication to the community and its public spaces. Thank you for your support!
-      </p>
-
-      <img src={require('./images/UDK-project.jpg')} alt='Parklet-Project-Img' />
+      {/* <SectionTitle titleName={'About the Parklet'}></SectionTitle> */}
+        <h1 className={classes.titleName}>About the Parklet</h1>
+        <hr className={classes.titleUnderline}></hr>
+        <br></br>
+        <p className={classes.projectGoal}>
+          To help fund the renovation of The Parklet on the Ave., we invite you to become a part of this exciting project and join us in making a difference in our community. Your support will be acknowledged with a wooden floor-board personalized with a custom quote by you (of up to 80 words), showcasing your commitment to the parklet's continued success and making your mark on the U-District.
+        </p>
+        <p className={classes.projectGoal}>
+          So, what are you waiting for? Donate today and be a part of something truly special. Your name will forever be associated with the parklet on the Ave, a testament to your dedication to the community and its public spaces. Thank you for your support!
+        </p>
+      <img src={require('./images/UDK-project.jpg')} alt='Parklet-Project-Img' className={classes.parkletImg} />
     </section>
     <section className={classes.historySection}>
-      <SectionTitle titleName={'Parklet History'}></SectionTitle>
+      {/* <SectionTitle titleName={'Parklet History'}></SectionTitle> */}
       <div className={classes.cardHolder}>
         {/* !!!!!!! TODO PUT IN CORRECT IMAGES!!!!!!! */}
         <Card imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardTitle={'Original Kickstarter'} cardText={'The kickstarter campaign that started it all!'}></Card>

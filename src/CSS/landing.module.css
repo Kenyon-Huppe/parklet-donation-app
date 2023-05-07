@@ -51,10 +51,36 @@ div.buttonNav {
     float: right;
 }
 
-.titleName {
-    font-size: 100px;
+
+.titleUnderline {
+    width: 40%;
+    float: left;
+    margin-left: 60px;
 }
 
-hr {
-    width: 40%;
+.titleName {
+    font-size: 30px;
+    width: 50%;
+}
+
+.projectGoal {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    width: 50%;
+    margin-right: 10px;
+    margin-left: 30px;
+    color: #7B6B5D;
+}
+
+.projectSection {
+    width: 100%;
+}
+
+
+.parkletImg {
+    width: 30%;
+    float: right;
+    margin: 0px 0px 15px 15px;
+    
 }

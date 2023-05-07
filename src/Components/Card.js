@@ -8,7 +8,7 @@ const Card = ({ imageLink, cardTitle, cardText, pageLink, directoryChange }) => 
         <div className={classes.card}>
             <a href={pageLink}>
                 <img src={imageLink} alt="Image-Link" onClick={directoryChange} />
-                <SectionTitle className={classes.cardSectionTitle}>{cardTitle}</SectionTitle>
+                {/* <SectionTitle className={classes.cardSectionTitle}>{cardTitle}</SectionTitle> */}
                 <p className={classes.cardText}>{cardText}</p>
             </a>
         </div>
