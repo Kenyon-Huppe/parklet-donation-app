@@ -3,12 +3,14 @@ import React from 'react'
 import SectionTitle from './landingPage/SectionTitle'
 import classes from '../CSS/landing.module.css'
 
-const Card = ({ imageLink, cardTitle, cardText }) => {
+const Card = ({ imageLink, cardTitle, cardText, pageLink, directoryChange }) => {
     return (
         <div className={classes.card}>
-            <img src={imageLink} alt="Image-Link" />
-            <SectionTitle className={classes.cardSectionTitle}>{cardTitle}</SectionTitle>
-            <p className={classes.cardText}>{cardText}</p>
+            <a href={pageLink}>
+                <img src={imageLink} alt="Image-Link" onClick={directoryChange} />
+                <SectionTitle className={classes.cardSectionTitle}>{cardTitle}</SectionTitle>
+                <p className={classes.cardText}>{cardText}</p>
+            </a>
         </div>
     )
 }
