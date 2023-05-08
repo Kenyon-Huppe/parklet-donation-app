@@ -64,13 +64,13 @@ function App() {
         {/* !!! TODO ADD LINKS BELOW !!! */}
         <ul className={classes.links}>
           <li>
-            <a href=''><img src={facebookIcon} alt="Facebook" /></a>
+            <a href=''><img src={facebookIcon} alt="Facebook" className={classes.facebook} /></a>
           </li>
           <li>
-            <a href=""><img src={twitterIcon} alt="Twitter" /></a>
+            <a href=""><img src={twitterIcon} alt="Twitter" className={classes.twitter} /></a>
           </li>
           <li>
-            <a href=""><img src={instagramIcon} alt="Instagram" /></a>
+            <a href=""><img src={instagramIcon} alt="Instagram" className={classes.instagram} /></a>
           </li>
         </ul>
         <h3 className={classes.footerTitle}>Make your mark on the park!</h3>
@@ -78,7 +78,7 @@ function App() {
           Get a custom inscription on a parklet deck board with a donation of $100 or just kick in a little bit to support our non-profit grow!
         </p>
         <button className={`${classes.btn} ${classes.footerBtn}`} onClick={donationPageLink}>Donate Now!</button>
-        <article className={classes.contactInfo}>
+        <div className={classes.contactInfo}>
           <div className={classes.phoneInfo}>
             <p>Phone</p>
             <p>PHONE NUMBER HERE</p>
@@ -87,10 +87,10 @@ function App() {
             <p>Email</p>
             <p>EMAIL ADDRESS HERE</p>
           </div>
-        </article>
+        </div>
       </div>
       <div className={classes.rightFooter}>
-        <img src={require('./images/UDK-board.jpg')} alt="Footer-Img" />
+        <img src={require('./images/UDK-board.jpg')} alt="Footer-Img" className={classes.birdImg}/>
       </div>
       {/* below is included as it is necessary to credit for use of given favicons */}
       <article className={classes.faviconLink}>
