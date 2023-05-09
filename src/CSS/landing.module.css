@@ -175,6 +175,7 @@ li {
     height: 600px;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-right: 40px;
 }
 
 .footerTitle {
@@ -188,8 +189,8 @@ li {
     font-family: Garamond, serif;
     font-size: 25px;
     justify-content: center;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .footerBtn {
@@ -225,4 +226,22 @@ li {
     font-family: Garamond, serif;
     font-size: 20px;
     flex: 1;
+}
+
+.faviconLink {
+    display: flex;
+    margin-right: 40px;
+    
+}
+
+.faviconLinkFacebook {
+
+}
+
+.faviconLinkTwitter {
+    flex: 1;
+}
+
+.faviconLinkInstagram {
+    flex: 2;
 }

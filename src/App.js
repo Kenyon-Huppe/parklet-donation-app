@@ -59,7 +59,7 @@ function App() {
         <Card cardDescription={'Construction Timelapse'} imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardText={'Short timelapse video of the parklet construction'}></Card>
       </div>
     </div>
-    <section className={classes.footerSection}>
+    <div className={classes.footerSection}>
       <div className={classes.leftFooter}>
         {/* !!! TODO ADD LINKS BELOW !!! */}
         <ul className={classes.links}>
@@ -86,6 +86,18 @@ function App() {
           <div className={classes.emailInfo}>
             <p>Email</p>
             <p>EMAIL ADDRESS HERE</p>
+            <br></br>
+            <div className={classes.faviconLink}>
+            <div className={classes.faviconLinkFacebook}>
+              <a target="_blank" href="https://icons8.com/icon/118467/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </div>
+            <div className={classes.faviconLinkTwitter}>
+              <a target="_blank" href="https://icons8.com/icon/60014/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </div>
+            <div className={classes.faviconLinkInstagram}>
+              <a target="_blank" href="https://icons8.com/icon/32309/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </div>
+      </div>
           </div>
         </div>
       </div>
@@ -93,7 +105,7 @@ function App() {
         <img src={require('./images/UDK-board.jpg')} alt="Footer-Img" className={classes.birdImg}/>
       </div>
       {/* below is included as it is necessary to credit for use of given favicons */}
-      <article className={classes.faviconLink}>
+      {/* <div className={classes.faviconLink}>
         <div className={classes.faviconLinkFacebook}>
           <a target="_blank" href="https://icons8.com/icon/118467/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
         </div>
@@ -103,8 +115,8 @@ function App() {
         <div className={classes.faviconLinkInstagram}>
           <a target="_blank" href="https://icons8.com/icon/32309/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
         </div>
-      </article>
-    </section>
+      </div> */}
+    </div>
   </div >;
 
   // holds all routes for website
