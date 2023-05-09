@@ -10,25 +10,33 @@ import instagramIcon from './images/instagram.svg'
 
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import DonationPageData from './Components/donationPage/DonationPageData';
+import DonationForm from './Components/donationPage/DonationForm'
+import CustomDonation from './Components/donationPage/CustomDonation';
 
 
 function App() {
   let navigate = useNavigate();
-
-  // function navigates to home page
-  const homePageLink = () => {
-    navigate('/');
-  }
 
   // function navigates to donation page
   const donationPageLink = () => {
     navigate('/donation');
   }
 
+  // function navigates to home page
+  const donationFormLink = () => {
+    navigate('/donation/board-donation');
+  }
+
+  // function navigates to donation page
+  const customDonationLink = () => {
+    navigate('/donation/custom-donation');
+  }
+
+
   // holds data for landing page
   const homePage = <div className="App">
     <section className={classes.bannerSection}>
-      <Header homePageLink={homePageLink} donationPageLink={donationPageLink}></Header>
+      <Header></Header>
       <img src={require('./images/UDK-banner.jpg')} alt='Banner-Image' className={classes.bannerImg} />
       <img src={require('./images/UDK-parklet-name.png')} alt="Partlet-on-the-Ave" className={classes.title} />
     </section>
@@ -46,7 +54,7 @@ function App() {
         </p>
       </div>
       <div className={classes.parkletImg}>
-          <img src={require('./images/UDK-project.jpg')} alt='Parklet-Project-Img' className={classes.parkletPic}/>
+        <img src={require('./images/UDK-project.jpg')} alt='Parklet-Project-Img' className={classes.parkletPic} />
       </div>
     </div>
     <div className={classes.historySection}>
@@ -88,21 +96,21 @@ function App() {
             <p>EMAIL ADDRESS HERE</p>
             <br></br>
             <div className={classes.faviconLink}>
-            <div className={classes.faviconLinkFacebook}>
-              <a target="_blank" href="https://icons8.com/icon/118467/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+              <div className={classes.faviconLinkFacebook}>
+                <a target="_blank" href="https://icons8.com/icon/118467/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+              </div>
+              <div className={classes.faviconLinkTwitter}>
+                <a target="_blank" href="https://icons8.com/icon/60014/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+              </div>
+              <div className={classes.faviconLinkInstagram}>
+                <a target="_blank" href="https://icons8.com/icon/32309/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+              </div>
             </div>
-            <div className={classes.faviconLinkTwitter}>
-              <a target="_blank" href="https://icons8.com/icon/60014/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-            </div>
-            <div className={classes.faviconLinkInstagram}>
-              <a target="_blank" href="https://icons8.com/icon/32309/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-            </div>
-      </div>
           </div>
         </div>
       </div>
       <div className={classes.rightFooter}>
-        <img src={require('./images/UDK-board.jpg')} alt="Footer-Img" className={classes.birdImg}/>
+        <img src={require('./images/UDK-board.jpg')} alt="Footer-Img" className={classes.birdImg} />
       </div>
       {/* below is included as it is necessary to credit for use of given favicons */}
       {/* <div className={classes.faviconLink}>
@@ -126,7 +134,9 @@ function App() {
         {/* home */}
         <Route path='/' element={homePage} exact></Route>
         {/* donation */}
-        <Route path='/donation' element={<DonationPageData homePageLink={homePageLink} donationPageLink={donationPageLink}></DonationPageData>} exact></Route>
+        <Route path='/donation' element={<DonationPageData donationFormLink={donationFormLink} customDonationLink={customDonationLink}></DonationPageData>} exact></Route>
+        <Route path='/donation/board-donation' element={<DonationForm></DonationForm>} exact></Route>
+        <Route path='/donation/custom-donation' element={<CustomDonation></CustomDonation>} exact></Route>
       </Routes>
     </div>
   );
