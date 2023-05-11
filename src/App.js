@@ -10,7 +10,7 @@ import instagramIcon from './images/instagram.svg'
 
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import DonationPageData from './Components/donationPage/DonationPageData';
-import DonationForm from './Components/donationPage/DonationForm'
+import DonationFormWithStripe from './Components/donationPage/DonationFormWithStripe';
 import CustomDonation from './Components/donationPage/CustomDonation';
 
 
@@ -135,7 +135,7 @@ function App() {
         <Route path='/' element={homePage} exact></Route>
         {/* donation */}
         <Route path='/donation' element={<DonationPageData donationFormLink={donationFormLink} customDonationLink={customDonationLink}></DonationPageData>} exact></Route>
-        <Route path='/donation/board-donation' element={<DonationForm></DonationForm>} exact></Route>
+        <Route path="/donation/board-donation" element={<DonationFormWithStripe />} />
         <Route path='/donation/custom-donation' element={<CustomDonation></CustomDonation>} exact></Route>
       </Routes>
     </div>
