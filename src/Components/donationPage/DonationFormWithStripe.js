@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { CardElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-
-const stripePromise = loadStripe('pk_test_51JJr9eGqo18zNOLi4kcaIhibPf6of3HBYddyD4WlQvGv6OhhHA5SkJlqYVMGFx9asDanRchjm9VvQQxlKUVQBUgv004JVSvADP'); //This is a testing publishable key. Insert regular publishable key when ready. 
 
 const DonationForm = () => {
   const [firstName, setFirstName] = useState('');
@@ -11,7 +8,6 @@ const DonationForm = () => {
   const [donationAmount, setDonationAmount] = useState('');
   const [customQuote, setCustomQuote] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
 
@@ -22,36 +18,23 @@ const DonationForm = () => {
       return;
     }
     // If the donation amount is greater than or equal to 100 dollars, process the payment through Stripe
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: 'card',
-      card: elements.getElement(CardElement),
-      billing_details: {
-        name: `${firstName} ${lastName}`,
-        email: email
-      }
-    });
-    if (error) { // If the payment processing through Stripe fails, display an error message to the user
-      setErrorMessage(error.message);
-      return;
-    }
-    const { id: paymentMethodId } = paymentMethod;
-    const { id: paymentIntentId } = await fetch('../api/create-payment-intent', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
+    const result = await stripe.confirmCardPayment('your-client-secret', { // Replace 'your-client-secret' with your Stripe API client secret key
+      payment_method: {
+        card: elements.getElement(CardElement), // Retrieve the credit card information from the CardElement component
+        billing_details: {
+          name: `${firstName} ${lastName}`,
+          email: email
+        }
       },
-      body: JSON.stringify({
-        paymentMethodId,
-        amount: donationAmount * 100
-      })
-    }).then((res) => res.json());
-    const { error: paymentIntentError } = await stripe.confirmCardPayment(paymentIntentId);
-    if (paymentIntentError) { // If the payment processing through Stripe fails, display an error message to the user
-      setErrorMessage(paymentIntentError.message);
+      amount: donationAmount * 100, // Convert the donation amount to cents and set it as the payment amount
+      currency: 'usd' // Set the payment currency as US dollars
+    });
+    if (result.error) { // If the payment processing through Stripe fails, display an error message to the user
+      setErrorMessage(result.error.message);
       return;
     }
     // If the payment processing through Stripe is successful, send the form data to Formspree to process the email
-    const response = await fetch('https://formspree.io/f/mdovbyoa', { // This goes to Jordan's email for testing purposes. 
+    const response = await fetch('https://formspree.io/f/xlekjdyl', { // Replace 'https://formspree.io/f/xlekjdyl' with your Formspree endpoint URL
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -66,61 +49,57 @@ const DonationForm = () => {
     });
     if (response.ok) { // If the form submission to Formspree is successful, display a success message to the user
       setErrorMessage('');
-      setIsSubmitted(true);
+      alert('Your payment has been processed successfully.');
     } else { // If the form submission to Formspree fails, display an error message to the user
-      setErrorMessage('There was an error processing your donation. Pleasetry again later.');
-      setIsSubmitted(false);
-      }
-      };
-      
-      // Add a character counter to the quote section that limits the number of characters to 80
-      const handleCustomQuoteChange = (event) => {
-      const { value } = event.target;
-      if (value.length > 80) {
+      setErrorMessage('There was an error processing your donation. Please try again later.');
+    }
+  };
+  
+  // Add a character counter to the quote section that limits the number of characters to 80
+  const handleCustomQuoteChange = (event) => {
+    const { value } = event.target;
+    if (value.length > 80) {
       return;
-      }
-      setCustomQuote(value);
-      };
-      
-      if (isSubmitted) {
-      return <div>Thank you for your donation!</div>;
-      }
-      
-      return (
-<form onSubmit={handleFormSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-  <label htmlFor="firstName">First Name</label>
-  <input type="text" id="firstName" name="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} style={{ marginBottom: '10px' }} />
+    }
+    setCustomQuote(value);
+  };
 
-  <label htmlFor="lastName">Last Name</label>
-  <input type="text" id="lastName" name="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} style={{ marginBottom: '10px' }} />
+  return (
+    <form onSubmit={handleFormSubmit}>
+      <label htmlFor="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
 
-  <label htmlFor="email">Email</label>
-  <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ marginBottom: '10px' }} />
+      <label htmlFor="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} />
 
-  <label htmlFor="donationAmount">Donation Amount (USD)</label>
-  <input type="number" id="donationAmount" name="donationAmount" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} style={{ marginBottom: '10px' }} />
+      <label htmlFor="email">Email</label>
+      <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
-  <label htmlFor="customQuote">Custom Quote Inscription (Optional, 80 characters or less)</label>
-  <textarea id="customQuote" name="customQuote" value={customQuote} onChange={handleCustomQuoteChange} style={{ marginBottom: '10px' }} />
+      <label htmlFor="donationAmount">Donation Amount</label>
+      <input type="number" id="donationAmount" name="donationAmount" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} />
 
-  {errorMessage && <div className="error-message">{errorMessage}</div>}
+      <label htmlFor="customQuote">Custom Quote</label>
+      <textarea id="customQuote" name="customQuote" value={customQuote} onChange={handleCustomQuoteChange} maxLength="80" />
 
-  <div className="card-container">
-    <CardElement />
-  </div>
+      <label htmlFor="cardElement">Credit Card Information</label>
+      <div id="cardElement">
+        <CardElement />
+      </div>
 
-  <button type="submit" style={{ marginTop: '10px' }}>Donate</button>
-</form>
+      <button type="submit">Submit</button>
 
-);
+      {errorMessage && <div>{errorMessage}</div>}
+    </form>
+  );
 };
 
-const StripeElements = () => {
-return (
-<Elements stripe={stripePromise}>
-<DonationForm />
-</Elements>
-);
+const DonationFormWithStripe = () => {
+  const stripePromise = loadStripe('your-stripe-publishable-key'); //replace 'your-stripe-publishable-key' with your stripe API publishable key
+  return (
+    <Elements stripe={stripePromise}>
+      <DonationForm />
+    </Elements>
+  );
 };
 
-export default StripeElements;
+export default DonationFormWithStripe;
