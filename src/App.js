@@ -22,15 +22,15 @@ function App() {
     navigate('/donation');
   }
 
-  // function navigates to home page
-  const donationFormLink = () => {
-    navigate('/donation/board-donation');
-  }
+// function navigates to donation form URL
+const donationFormLink = () => {
+  window.location.href = 'https://buy.stripe.com/test_aEU2at0MO8Mffja145';
+}
 
-  // function navigates to donation page
-  const customDonationLink = () => {
-    navigate('/donation/custom-donation');
-  }
+// function navigates to custom donation URL
+const customDonationLink = () => {
+  window.location.href = 'https://buy.stripe.com/test_dR68yR7bcgeH6ME144';
+}
 
 
   // holds data for landing page
