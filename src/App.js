@@ -24,12 +24,12 @@ function App() {
 
 // function navigates to donation form URL
 const donationFormLink = () => {
-  window.location.href = 'https://buy.stripe.com/test_aEU2at0MO8Mffja145';
+  window.location.href = 'https://donate.stripe.com/test_aEU2at0MO8Mffja145';
 }
 
 // function navigates to custom donation URL
 const customDonationLink = () => {
-  window.location.href = 'https://buy.stripe.com/test_dR68yR7bcgeH6ME144';
+  window.location.href = 'https://donate.stripe.com/test_dR68yR7bcgeH6ME144';
 }
 
 
