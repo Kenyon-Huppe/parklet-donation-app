@@ -10,7 +10,7 @@ import instagramIcon from './images/instagram.svg'
 
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import DonationPageData from './Components/donationPage/DonationPageData';
-import DonationForm from './Components/donationPage/DonationForm'
+import DonationFormWithStripe from './Components/donationPage/DonationFormWithStripe';
 import CustomDonation from './Components/donationPage/CustomDonation';
 
 
@@ -22,15 +22,15 @@ function App() {
     navigate('/donation');
   }
 
-  // function navigates to home page
-  const donationFormLink = () => {
-    navigate('/donation/board-donation');
-  }
+// function navigates to donation form URL
+const donationFormLink = () => {
+  window.location.href = 'https://donate.stripe.com/test_aEU2at0MO8Mffja145';
+}
 
-  // function navigates to donation page
-  const customDonationLink = () => {
-    navigate('/donation/custom-donation');
-  }
+// function navigates to custom donation URL
+const customDonationLink = () => {
+  window.location.href = 'https://donate.stripe.com/test_dR68yR7bcgeH6ME144';
+}
 
 
   // holds data for landing page
@@ -119,7 +119,7 @@ function App() {
         <Route path='/' element={homePage} exact></Route>
         {/* donation */}
         <Route path='/donation' element={<DonationPageData donationFormLink={donationFormLink} customDonationLink={customDonationLink}></DonationPageData>} exact></Route>
-        <Route path='/donation/board-donation' element={<DonationForm></DonationForm>} exact></Route>
+        <Route path="/donation/board-donation" element={<DonationFormWithStripe />} />
         <Route path='/donation/custom-donation' element={<CustomDonation></CustomDonation>} exact></Route>
       </Routes>
     </div>
