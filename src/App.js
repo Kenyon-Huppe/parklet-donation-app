@@ -4,7 +4,6 @@ import Header from './Components/landingPage/Header';
 // import SectionTitle from './Components/landingPage/SectionTitle';
 import classes from './CSS/landing.module.css'
 import Card from './Components/Card'
-import facebookIcon from './images/facebook.svg'
 import twitterIcon from './images/twitter.svg'
 import instagramIcon from './images/instagram.svg'
 
@@ -71,7 +70,6 @@ const customDonationLink = () => {
       <div className={classes.leftFooter}>
         {/* !!! TODO ADD LINKS BELOW !!! */}
         <ul className={classes.links}>
-
           <li>
             <a href=""><img src={twitterIcon} alt="Twitter" className={classes.twitter} /></a>
           </li>
