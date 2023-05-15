@@ -9,9 +9,10 @@ const Card = ({ imageLink, cardDescription, cardText, pageLink, directoryChange 
             <a href={pageLink}>
                 <img className={classes.cardImg} src={imageLink} alt="Image-Link" onClick={directoryChange} width={300} />
                 <p className={classes.cardDescription}>{cardDescription}</p>
+                </a>
                 <hr></hr>
                 <p className={classes.cardText}>{cardText}</p>
-            </a>
+            
         </div>
     )
 }
