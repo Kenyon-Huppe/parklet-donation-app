@@ -70,10 +70,10 @@ const customDonationLink = () => {
         {/* !!! TODO ADD LINKS BELOW !!! */}
         <ul className={classes.links}>
           <li>
-            <a href=""><img src={twitterIcon} alt="Twitter" className={classes.twitter} /></a>
+            <a href="https://twitter.com/UDistrictOrg"><img src={twitterIcon} alt="Twitter" className={classes.twitter} /></a>
           </li>
           <li>
-            <a href=""><img src={instagramIcon} alt="Instagram" className={classes.instagram} /></a>
+            <a href="https://www.instagram.com/udistrictseattle/"><img src={instagramIcon} alt="Instagram" className={classes.instagram} /></a>
           </li>
         </ul>
         <h3 className={classes.footerTitle}>Make your mark on the park!</h3>
