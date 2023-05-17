@@ -173,6 +173,7 @@ hr {
 
 .twitter {
     width: 100px;
+    fill: var(--primary-white);
 }
 
 .instagram {
