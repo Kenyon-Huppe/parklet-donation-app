@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../landingPage/Header'
-import Card from '../Card'
+import DonationCard from '../donationPage/DonationCard'
 import DonateCard from '../../images/donateCard.png'
 import classes from '../../CSS/donation.module.css'
 // import donationFormImg from '../../images/UDK-Parklet-03.jpg'
@@ -11,9 +11,9 @@ const DonationPageData = ({ donationFormLink, customDonationLink }) => {
         <div>
             <Header></Header>
             <p>Buy a Board</p>
-            <Card className={classes.donationCard} imageLink={DonateCard} cardText={'Purchase a custom engraved board ($100 minimum) with text of your choosing (70 characters) that will be the foundation for the parklet for years to come!'} directoryChange={donationFormLink}></Card>
+            <DonationCard className={classes.donationCard} imageLink={DonateCard} cardText={'Purchase a custom engraved board ($100 minimum) with text of your choosing (70 characters) that will be the foundation for the parklet for years to come!'} directoryChange={donationFormLink}></DonationCard>
             <p>Custom Donation</p>
-            <Card className={classes.donationCard} imageLink={DonateCard} cardText={'Don\'t feel like spending $100 for a custom board? That\'s alright! You can still do your part to help support the parklet & it\'s continued development. Donate a custom amount here to support the future of this community!'} directoryChange={customDonationLink}></Card>
+            <DonationCard className={classes.donationCard} imageLink={DonateCard} cardText={'Don\'t feel like spending $100 for a custom board? That\'s alright! You can still do your part to help support the parklet & it\'s continued development. Donate a custom amount here to support the future of this community!'} directoryChange={customDonationLink}></DonationCard>
         </div>
 
 
