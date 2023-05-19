@@ -81,10 +81,10 @@ const DonationForm = () => {
     }
   };
 
-  // Add a character counter to the quote section that limits the number of characters to 80
+  // Add a character counter to the quote section that limits the number of characters to 70
   const handleCustomQuoteChange = (event) => {
     const { value } = event.target;
-    if (value.length > 80) {
+    if (value.length > 70) {
       return;
     }
     setCustomQuote(value);
@@ -137,7 +137,7 @@ const DonationForm = () => {
         />
       </div>
       <div>
-        <label htmlFor="customQuote">Custom quote inscription (Optional, 80 characters or less)</label>
+        <label htmlFor="customQuote">Custom quote inscription (Optional, 70 characters or less)</label>
         <input
           type="text"
           id="customQuote"

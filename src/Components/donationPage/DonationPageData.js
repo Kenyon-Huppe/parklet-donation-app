@@ -11,13 +11,13 @@ const DonationPageData = ({ donationFormLink, customDonationLink }) => {
         <div>
             <Header></Header>
             <p>Buy a Board</p>
-            <Card className={classes.donationCard} imageLink={DonateCard} cardText={'Purchase a custom engraved board with text of your choosing (80 characters) that will be the foundation for the parklet for years to come!'} directoryChange={donationFormLink}></Card>
+            <Card className={classes.donationCard} imageLink={DonateCard} cardText={'Purchase a custom engraved board ($100 minimum) with text of your choosing (70 characters) that will be the foundation for the parklet for years to come!'} directoryChange={donationFormLink}></Card>
             <p>Custom Donation</p>
             <Card className={classes.donationCard} imageLink={DonateCard} cardText={'Don\'t feel like spending $100 for a custom board? That\'s alright! You can still do your part to help support the parklet & it\'s continued development. Donate a custom amount here to support the future of this community!'} directoryChange={customDonationLink}></Card>
         </div>
-        
 
-        
+
+
         // DELETE LATER POSSIBLY (if end up going with donation subpages) <div>
         //     <Header homePageLink={homePageLink} donationPageLink={donationPageLink}></Header>
 
