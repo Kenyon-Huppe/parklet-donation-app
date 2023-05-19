@@ -1,4 +1,7 @@
 /* Header CSS data goes here */
-.donationCard div a {
-    color: blue;
+.donationCard {
+    display: flex;
+}
+.donationCardContainer {
+    flex: 2;
 }

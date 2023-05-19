@@ -18,5 +18,4 @@ const DonationCard = ({ imageLink, cardDescription, cardText, pageLink, director
 
 export default DonationCard
 
-
 // todo add 'History' information

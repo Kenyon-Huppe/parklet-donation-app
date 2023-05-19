@@ -4,7 +4,6 @@ import Header from './Components/landingPage/Header';
 // import SectionTitle from './Components/landingPage/SectionTitle';
 import classes from './CSS/landing.module.css'
 import Card from './Components/Card'
-import facebookIcon from './images/facebook.svg'
 import twitterIcon from './images/twitter.svg'
 import instagramIcon from './images/instagram.svg'
 
@@ -98,18 +97,6 @@ function App() {
       <div className={classes.rightFooter}>
         <img src={require('./images/UDK-board.jpg')} alt="Footer-Img" className={classes.birdImg} />
       </div>
-      {/* below is included as it is necessary to credit for use of given favicons */}
-      {/* <div className={classes.faviconLink}>
-        <div className={classes.faviconLinkFacebook}>
-          <a target="_blank" href="https://icons8.com/icon/118467/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-        </div>
-        <div className={classes.faviconLinkTwitter}>
-          <a target="_blank" href="https://icons8.com/icon/60014/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-        </div>
-        <div className={classes.faviconLinkInstagram}>
-          <a target="_blank" href="https://icons8.com/icon/32309/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-        </div>
-      </div> */}
     </div>
   </div >;
 
