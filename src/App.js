@@ -46,7 +46,7 @@ function App() {
         <hr className={classes.titleUnderline}></hr>
         <br></br>
         <p className={classes.projectGoal}>
-          To help fund the renovation of The Parklet on the Ave., we invite you to become a part of this exciting project and join us in making a difference in our community. Your support will be acknowledged with a wooden floor-board personalized with a custom quote by you (of up to 80 words), showcasing your commitment to the parklet's continued success and making your mark on the U-District.
+          To help fund the renovation of The Parklet on the Ave., we invite you to become a part of this exciting project and join us in making a difference in our community. Your support will be acknowledged with a wooden floor-board personalized with a custom quote by you (of up to 80 characters), showcasing your commitment to the parklet's continued success and making your mark on the U District.
         </p>
         <p className={classes.projectGoal}>
           So, what are you waiting for? Donate today and be a part of something truly special. Your name will forever be associated with the parklet on the Ave, a testament to your dedication to the community and its public spaces. Thank you for your support!
@@ -61,9 +61,9 @@ function App() {
       <h1 className={classes.titleNameHis}>Parklet History</h1>
       <div className={classes.cardHolder}>
         {/* !!!!!!! TODO PUT IN CORRECT IMAGES!!!!!!! */}
-        <Card cardDescription={'Original Kickstarter'} imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardText={'The kickstarter campaign that started it all!'}></Card>
-        <Card cardDescription={'Parklet Dedication'} imageLink={require('./images/UDK-parklet-dedication.jpg')} cardText={'Original dedication of parklet (May 2015)'}></Card>
-        <Card cardDescription={'Construction Timelapse'} imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardText={'Short timelapse video of the parklet construction'}></Card>
+        <Card cardDescription={'Original Kickstarter'} pageLink={'https://www.kickstarter.com/projects/udistrictsquare/u-district-parklet'} imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardText={'The kickstarter campaign that started it all!'}></Card>
+        <Card cardDescription={'Parklet Dedication'} pageLink={'https://www.theurbanist.org/2015/06/26/u-district-parklet-launch-celebration/'} imageLink={require('./images/UDK-parklet-dedication.jpg')} cardText={'Original dedication of parklet (May 2015)'}></Card>
+        <Card pageLink={'https://www.youtube.com/watch?v=0TpebWOzGE4'} cardDescription={'Construction Timelapse'} imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardText={'Short timelapse video of the parklet construction'}></Card>
       </div>
     </div>
     <div className={classes.footerSection}>
