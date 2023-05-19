@@ -4,11 +4,13 @@ import Header from './Components/landingPage/Header';
 // import SectionTitle from './Components/landingPage/SectionTitle';
 import classes from './CSS/landing.module.css'
 import Card from './Components/Card'
+import facebookIcon from './images/facebook.svg'
 import twitterIcon from './images/twitter.svg'
 import instagramIcon from './images/instagram.svg'
+
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import DonationPageData from './Components/donationPage/DonationPageData';
-import DonationFormWithStripe from './Components/donationPage/DonationFormWithStripe';
+import DonationForm from './Components/donationPage/DonationForm'
 import CustomDonation from './Components/donationPage/CustomDonation';
 
 
@@ -60,9 +62,9 @@ function App() {
       <h1 className={classes.titleNameHis}>Parklet History</h1>
       <div className={classes.cardHolder}>
         {/* !!!!!!! TODO PUT IN CORRECT IMAGES!!!!!!! */}
-        <Card pageLink={"https://www.kickstarter.com/projects/udistrictsquare/u-district-parklet"} cardDescription={'Original Kickstarter'} imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardText={'The kickstarter campaign that started it all!'}></Card>
-        <Card pageLink={"https://www.theurbanist.org/2015/06/26/u-district-parklet-launch-celebration/"} cardDescription={'Parklet Dedication'} imageLink={require('./images/UDK-parklet-dedication.jpg')} cardText={'Original dedication of parklet (May 2015)'}></Card>
-        <Card pageLink={"https://www.youtube.com/watch?v=0TpebWOzGE4"} cardDescription={'Construction Timelapse'} imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardText={'Short timelapse video of the parklet construction'}></Card>
+        <Card cardDescription={'Original Kickstarter'} imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardText={'The kickstarter campaign that started it all!'}></Card>
+        <Card cardDescription={'Parklet Dedication'} imageLink={require('./images/UDK-parklet-dedication.jpg')} cardText={'Original dedication of parklet (May 2015)'}></Card>
+        <Card cardDescription={'Construction Timelapse'} imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardText={'Short timelapse video of the parklet construction'}></Card>
       </div>
     </div>
     <div className={classes.footerSection}>
@@ -93,10 +95,21 @@ function App() {
           </div>
         </div>
       </div>
-
       <div className={classes.rightFooter}>
         <img src={require('./images/UDK-board.jpg')} alt="Footer-Img" className={classes.birdImg} />
       </div>
+      {/* below is included as it is necessary to credit for use of given favicons */}
+      {/* <div className={classes.faviconLink}>
+        <div className={classes.faviconLinkFacebook}>
+          <a target="_blank" href="https://icons8.com/icon/118467/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </div>
+        <div className={classes.faviconLinkTwitter}>
+          <a target="_blank" href="https://icons8.com/icon/60014/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </div>
+        <div className={classes.faviconLinkInstagram}>
+          <a target="_blank" href="https://icons8.com/icon/32309/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </div>
+      </div> */}
     </div>
   </div>;
 
@@ -108,7 +121,7 @@ function App() {
         <Route path='/' element={homePage} exact></Route>
         {/* donation */}
         <Route path='/donation' element={<DonationPageData donationFormLink={donationFormLink} customDonationLink={customDonationLink}></DonationPageData>} exact></Route>
-        <Route path="/donation/board-donation" element={<DonationFormWithStripe />} />
+        <Route path='/donation/board-donation' element={<DonationForm></DonationForm>} exact></Route>
         <Route path='/donation/custom-donation' element={<CustomDonation></CustomDonation>} exact></Route>
       </Routes>
     </div>
