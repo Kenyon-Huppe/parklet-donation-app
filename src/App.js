@@ -90,7 +90,7 @@ function App() {
           </div>
           <div className={classes.emailInfo}>
             <p>Email</p>
-            <p>EMAIL ADDRESS HERE</p>
+            <a className={classes.email} href="mailto:info@udistrict.org">info@udistrict.org</a>
             <br></br>
           </div>
         </div>

@@ -6,11 +6,11 @@ const DonationCard = ({ imageLink, cardDescription, pageLink, directoryChange, c
     return (
         <div className={classes.cardContainer}>
             <div className={classes.card}>
-                <p className={classes.donationTitle}>{cardTitle}</p>
+                <p className={classes.donationTitle} onClick={directoryChange}>{cardTitle}</p>
                 <a href={pageLink}>
                     <img className={classes.cardImg} src={imageLink} alt="Image-Link" onClick={directoryChange} width={300} />
                 </a>
-                <p className={classes.cardText}>{cardText}</p>
+                <p className={classes.cardText} onClick={directoryChange}>{cardText}</p>
             </div>
         </div>
     )

@@ -6,7 +6,7 @@ import classes from '../CSS/landing.module.css'
 const Card = ({ imageLink, cardDescription, cardText, pageLink, directoryChange }) => {
     return (
         <div className={classes.card}>
-            <a href={pageLink}>
+            <a className={classes.linkcolor} href={pageLink}>
                 <img className={classes.cardImg} src={imageLink} alt="Image-Link" onClick={directoryChange} width={300} />
                 <p className={classes.cardDescription}>{cardDescription}</p>
                 </a>

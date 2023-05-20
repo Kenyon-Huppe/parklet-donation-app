@@ -39,7 +39,7 @@
     justify-content: center;
     margin-left: 5%;
     margin-right: 5%;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--primary-brown);
 }
@@ -76,4 +76,10 @@ h1 {
 hr {
     align-items: center;
     width: 30%;
+}
+
+
+.cardImg:hover {
+    width: 55%;
+
 }
