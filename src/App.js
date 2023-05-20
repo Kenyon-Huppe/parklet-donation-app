@@ -64,6 +64,7 @@ function App() {
         <Card pageLink={"https://www.kickstarter.com/projects/udistrictsquare/u-district-parklet"} cardDescription={'Original Kickstarter'} imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardText={'The kickstarter campaign that started it all!'}></Card>
         <Card pageLink={"https://www.theurbanist.org/2015/06/26/u-district-parklet-launch-celebration/"} cardDescription={'Parklet Dedication'} imageLink={require('./images/UDK-parklet-dedication.jpg')} cardText={'Original dedication of parklet (May 2015)'}></Card>
         <Card pageLink={"https://www.youtube.com/watch?v=0TpebWOzGE4"} cardDescription={'Construction Timelapse'} imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardText={'Short timelapse video of the parklet construction'}></Card>
+
       </div>
     </div>
     <div className={classes.footerSection}>

@@ -10,10 +10,12 @@ const DonationPageData = ({ donationFormLink, customDonationLink }) => {
     return (
         <div>
             <Header></Header>
-            <p>Buy a Board</p>
-            <DonationCard className={classes.donationCard} imageLink={DonateCard} cardText={'Purchase a custom engraved board ($100 minimum) with text of your choosing (70 characters) that will be the foundation for the parklet for years to come!'} directoryChange={donationFormLink}></DonationCard>
-            <p>Custom Donation</p>
-            <DonationCard className={classes.donationCard} imageLink={DonateCard} cardText={'Don\'t feel like spending $100 for a custom board? That\'s alright! You can still do your part to help support the parklet & it\'s continued development. Donate a custom amount here to support the future of this community!'} directoryChange={customDonationLink}></DonationCard>
+            <h1>Donate</h1>
+            <hr></hr>
+            <div className={classes.donateSection}>
+                <DonationCard className={classes.donationCard} imageLink={DonateCard} directoryChange={donationFormLink} cardTitle={'Buy a Board'} cardText={'Purchase a custom engraved board ($100 minimum) with text of your choosing (70 characters) that will be the foundation for the parklet for years to come!'} ></DonationCard>
+                <DonationCard className={classes.donationCard} imageLink={DonateCard} directoryChange={customDonationLink} cardTitle={'Custom Donation'} cardText={'Don\'t feel like spending $100 for a custom board? That\'s alright! You can still do your part to help support the parklet & it\'s continued development. Donate a custom amount here to support the future of this community!'}></DonationCard>
+            </div>
         </div>
 
 
