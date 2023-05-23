@@ -49,6 +49,7 @@ div.header {
 
 .donateBtn:hover {
     box-shadow: 0px 0px 10px var(--primary-white);
+    cursor: pointer;
 
 }
 
@@ -229,6 +230,7 @@ li {
 
 .footerBtn:hover {
     box-shadow: 0px 0px 10px var(--primary-white);
+    cursor: pointer;
 }
 
 .contactInfo {
