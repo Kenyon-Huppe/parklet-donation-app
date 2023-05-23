@@ -81,7 +81,7 @@ const customDonationLink = () => {
         </ul>
         <h3 className={classes.footerTitle}>Make your mark on the park!</h3>
         <p className={classes.footerText}>
-          Get a custom inscription on a parklet deck board with a donation of $100 or just kick in a little bit to support our non-profit grow!
+          Get a custom inscription on a parklet deck board with a donation of $100 or just kick in a little bit to support our non-profit!
         </p>
         <button className={`${classes.btn} ${classes.footerBtn}`} onClick={donationPageLink}>Donate Now!</button>
         <div className={classes.contactInfo}>
