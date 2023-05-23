@@ -22,15 +22,15 @@ function App() {
     navigate('/donation');
   }
 
-  // function navigates to donation form URL
-  const donationFormLink = () => {
-    window.location.href = 'https://donate.stripe.com/test_aEU2at0MO8Mffja145';
-  }
+// function navigates to donation form URL
+const donationFormLink = () => {
+  window.location.href = 'https://donate.stripe.com/9AQaFK37e2868Q83cj';
+}
 
-  // function navigates to custom donation URL
-  const customDonationLink = () => {
-    window.location.href = 'https://donate.stripe.com/test_dR68yR7bcgeH6ME144';
-  }
+// function navigates to custom donation URL
+const customDonationLink = () => {
+  window.location.href = 'https://donate.stripe.com/8wM15a37e6omgiA9AI';
+}
 
 
   // holds data for landing page
