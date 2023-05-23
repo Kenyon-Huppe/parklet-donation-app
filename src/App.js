@@ -84,10 +84,10 @@ function App() {
         </p>
         <button className={`${classes.btn} ${classes.footerBtn}`} onClick={donationPageLink}>Donate Now!</button>
         <div className={classes.contactInfo}>
-          <div className={classes.phoneInfo}>
+          {/* <div className={classes.phoneInfo}>
             <p>Phone</p>
             <p>PHONE NUMBER HERE</p>
-          </div>
+          </div> */}
           <div className={classes.emailInfo}>
             <p>Email</p>
             <a className={classes.email} href="mailto:info@udistrict.org">info@udistrict.org</a>
