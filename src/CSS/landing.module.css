@@ -385,8 +385,8 @@ a.linkcolor {
         font-family: Garamond, serif;
         font-size: 17px;
         flex: 1;
+        text-align: center;
         margin-left: 2%;
-        margin-right: 2%;
     }
     .emailInfo {
         color: var(--primary-white);
