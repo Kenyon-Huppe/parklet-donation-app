@@ -4,7 +4,6 @@ import Header from './Components/landingPage/Header';
 // import SectionTitle from './Components/landingPage/SectionTitle';
 import classes from './CSS/landing.module.css'
 import Card from './Components/Card'
-import facebookIcon from './images/facebook.svg'
 import twitterIcon from './images/twitter.svg'
 import instagramIcon from './images/instagram.svg'
 
@@ -19,6 +18,7 @@ function App() {
 
   // function navigates to donation page
   const donationPageLink = () => {
+    window.scrollTo(0, 0);
     navigate('/donation');
   }
 
@@ -47,7 +47,7 @@ const customDonationLink = () => {
         <hr className={classes.titleUnderline}></hr>
         <br></br>
         <p className={classes.projectGoal}>
-          To help fund the renovation of The Parklet on the Ave., we invite you to become a part of this exciting project and join us in making a difference in our community. Your support will be acknowledged with a wooden floor-board personalized with a custom quote by you (of up to 80 words), showcasing your commitment to the parklet's continued success and making your mark on the U-District.
+          To help fund the renovation of The Parklet on the Ave., we invite you to become a part of this exciting project and join us in making a difference in our community. Your support ($100 minimum) will be acknowledged with a wooden floor-board personalized with a custom quote by you (of up to 70 characters), showcasing your commitment to the parklet's continued success and making your mark on the U District.
         </p>
         <p className={classes.projectGoal}>
           So, what are you waiting for? Donate today and be a part of something truly special. Your name will forever be associated with the parklet on the Ave, a testament to your dedication to the community and its public spaces. Thank you for your support!
@@ -62,9 +62,10 @@ const customDonationLink = () => {
       <h1 className={classes.titleNameHis}>Parklet History</h1>
       <div className={classes.cardHolder}>
         {/* !!!!!!! TODO PUT IN CORRECT IMAGES!!!!!!! */}
-        <Card cardDescription={'Original Kickstarter'} imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardText={'The kickstarter campaign that started it all!'}></Card>
-        <Card cardDescription={'Parklet Dedication'} imageLink={require('./images/UDK-parklet-dedication.jpg')} cardText={'Original dedication of parklet (May 2015)'}></Card>
-        <Card cardDescription={'Construction Timelapse'} imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardText={'Short timelapse video of the parklet construction'}></Card>
+        <Card pageLink={"https://www.kickstarter.com/projects/udistrictsquare/u-district-parklet"} cardDescription={'Original Kickstarter'} imageLink={require('./images/kickstarter-2-logo-png-transparent.png')} cardText={'The kickstarter campaign that started it all!'}></Card>
+        <Card pageLink={"https://www.theurbanist.org/2015/06/26/u-district-parklet-launch-celebration/"} cardDescription={'Parklet Dedication'} imageLink={require('./images/UDK-parklet-dedication.jpg')} cardText={'Original dedication of parklet (May 2015)'}></Card>
+        <Card pageLink={"https://www.youtube.com/watch?v=0TpebWOzGE4"} cardDescription={'Construction Timelapse'} imageLink={require('./images/UDK-parklet-contstruction.jpg')} cardText={'Short timelapse video of the parklet construction'}></Card>
+
       </div>
     </div>
     <div className={classes.footerSection}>
@@ -72,13 +73,10 @@ const customDonationLink = () => {
         {/* !!! TODO ADD LINKS BELOW !!! */}
         <ul className={classes.links}>
           <li>
-            <a href=''><img src={facebookIcon} alt="Facebook" className={classes.facebook} /></a>
+            <a href="https://twitter.com/UDistrictOrg"><img src={twitterIcon} alt="Twitter" className={classes.twitter} /></a>
           </li>
           <li>
-            <a href=""><img src={twitterIcon} alt="Twitter" className={classes.twitter} /></a>
-          </li>
-          <li>
-            <a href=""><img src={instagramIcon} alt="Instagram" className={classes.instagram} /></a>
+            <a href="https://www.instagram.com/udistrictseattle/"><img src={instagramIcon} alt="Instagram" className={classes.instagram} /></a>
           </li>
         </ul>
         <h3 className={classes.footerTitle}>Make your mark on the park!</h3>
@@ -87,45 +85,22 @@ const customDonationLink = () => {
         </p>
         <button className={`${classes.btn} ${classes.footerBtn}`} onClick={donationPageLink}>Donate Now!</button>
         <div className={classes.contactInfo}>
-          <div className={classes.phoneInfo}>
+          {/* <div className={classes.phoneInfo}>
             <p>Phone</p>
             <p>PHONE NUMBER HERE</p>
-          </div>
+          </div> */}
           <div className={classes.emailInfo}>
             <p>Email</p>
-            <p>EMAIL ADDRESS HERE</p>
+            <a className={classes.email} href="mailto:info@udistrict.org">info@udistrict.org</a>
             <br></br>
-            <div className={classes.faviconLink}>
-              <div className={classes.faviconLinkFacebook}>
-                <a target="_blank" href="https://icons8.com/icon/118467/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-              </div>
-              <div className={classes.faviconLinkTwitter}>
-                <a target="_blank" href="https://icons8.com/icon/60014/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-              </div>
-              <div className={classes.faviconLinkInstagram}>
-                <a target="_blank" href="https://icons8.com/icon/32309/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
       <div className={classes.rightFooter}>
         <img src={require('./images/UDK-board.jpg')} alt="Footer-Img" className={classes.birdImg} />
       </div>
-      {/* below is included as it is necessary to credit for use of given favicons */}
-      {/* <div className={classes.faviconLink}>
-        <div className={classes.faviconLinkFacebook}>
-          <a target="_blank" href="https://icons8.com/icon/118467/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-        </div>
-        <div className={classes.faviconLinkTwitter}>
-          <a target="_blank" href="https://icons8.com/icon/60014/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-        </div>
-        <div className={classes.faviconLinkInstagram}>
-          <a target="_blank" href="https://icons8.com/icon/32309/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-        </div>
-      </div> */}
     </div>
-  </div >;
+  </div>;
 
   // holds all routes for website
   return (

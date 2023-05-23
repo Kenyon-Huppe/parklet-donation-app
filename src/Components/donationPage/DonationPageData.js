@@ -1,18 +1,29 @@
 import React from 'react'
 import Header from '../landingPage/Header'
-import Card from '../Card'
-import cartIcon from '../../images/shopping-cart.png'
+import DonationCard from '../donationPage/DonationCard'
+import DonateCard from '../../images/donateCard.png'
 import classes from '../../CSS/donation.module.css'
+import Footer from '../landingPage/Footer'
+
+
 // import donationFormImg from '../../images/UDK-Parklet-03.jpg'
 
 const DonationPageData = ({ donationFormLink, customDonationLink }) => {
-    const [wordCount, setWordCount] = React.useState(0);
+    // const [wordCount, setWordCount] = React.useState(0);
     return (
         <div>
             <Header></Header>
-            <Card className={classes.donationCard} cardTitle={'Buy a Board'} cardText={'Purchase a custom engraved board with text of your choosing (80 words) that will be the foundation for the parklet for years to come!'} directoryChange={donationFormLink}></Card>
-            <Card className={classes.donationCard} imageLink={customDonationLink} cardTitle={'Custom Donation'} cardText={'Don\'t feel like spending $100 for a custom board? That\'s alright! You can still do your part to help support the parklet & it\'s continued development. Donate a custom amount here to support the future of this community!'} directoryChange={customDonationLink}></Card>
+            <h1>Donate</h1>
+            <hr></hr>
+            <div className={classes.donateSection}>
+                <DonationCard className={classes.donationCard} imageLink={DonateCard} directoryChange={donationFormLink} cardTitle={'Buy a Board'} cardText={'Purchase a custom engraved board ($100 minimum) with text of your choosing (70 characters) that will be the foundation for the parklet for years to come!'} ></DonationCard>
+                <DonationCard className={classes.donationCard} imageLink={DonateCard} directoryChange={customDonationLink} cardTitle={'Custom Donation'} cardText={'Don\'t feel like spending $100 for a custom board? That\'s alright! You can still do your part to help support the parklet & it\'s continued development with a custom donation!'}></DonationCard>
+            </div>
+            <Footer></Footer>
         </div>
+
+
+
         // DELETE LATER POSSIBLY (if end up going with donation subpages) <div>
         //     <Header homePageLink={homePageLink} donationPageLink={donationPageLink}></Header>
 

@@ -63,7 +63,7 @@ const DonationForm = ({ customDonationLink }) => {
     // Add a character counter to the quote section that limits the number of characters to 80
     const handleCustomQuoteChange = (event) => {
         const { value } = event.target;
-        if (value.length > 80) {
+        if (value.length > 70) {
             return;
         }
         setCustomQuote(value);
@@ -85,8 +85,8 @@ const DonationForm = ({ customDonationLink }) => {
                 <label htmlFor="donationAmount"><strong>Donation Amount</strong></label>
                 <input type="number" id="donationAmount" name="donationAmount" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} />
                 <label htmlFor="customQuote"><strong>Custom Quote</strong></label>
-                <textarea cols="50" rows="5" id="customQuote" name="customQuote" value={customQuote} onChange={handleCustomQuoteChange} maxLength="80" />
-                <p className={classes.wordCounter}>{customQuote.length}/80</p>
+                <textarea cols="50" rows="5" id="customQuote" name="customQuote" value={customQuote} onChange={handleCustomQuoteChange} maxLength="70" />
+                <p className={classes.wordCounter}>{customQuote.length}/70</p>
 
                 <label htmlFor="cardElement"><strong>Credit Card Information</strong></label>
                 <div id="cardElement">
