@@ -18,6 +18,7 @@ function App() {
 
   // function navigates to donation page
   const donationPageLink = () => {
+    window.scrollTo(0, 0);
     navigate('/donation');
   }
 
