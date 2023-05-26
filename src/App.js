@@ -50,7 +50,7 @@ const customDonationLink = () => {
           To help fund the renovation of The Parklet on the Ave., we invite you to make a donation and become a part of this exciting project. Any amount will help, but if you choose to donate $100 dollars or more, your support will be acknowledged with a wooden floor-board personalized with a custom quote by you (of up to 70 characters). This will showcase your commitment to the parklet's continued success and make your mark on the U District.
         </p>
         <p className={classes.projectGoal}>
-          So, what are you waiting for? Donate today and be a part of something truly special. Your name will forever be associated with the parklet on the Ave, a testament to your dedication to the community and its public spaces. Thank you for your support!
+          So, what are you waiting for? Donate today and be a part of something truly special. Your name will forever be associated with the parklet on the Ave, a testament to your dedication to the community and its public spaces. Thank you for your support! Visit the parklet right in front of Bulldog News, located at 4208 University Way NE, Seattle, WA 98105.
         </p>
       </div>
       <div className={classes.parkletImg}>
@@ -85,12 +85,12 @@ const customDonationLink = () => {
         </p>
         <button className={`${classes.btn} ${classes.footerBtn}`} onClick={donationPageLink}>Donate Now!</button>
         <div className={classes.contactInfo}>
-          {/* <div className={classes.phoneInfo}>
-            <p>Phone</p>
-            <p>PHONE NUMBER HERE</p>
-          </div> */}
+           <div className={classes.addressInfo}>
+          <strong>4208 University Way NE</strong>
+          <br></br>
+          <strong>Seattle WA 98105</strong>
+          </div>
           <div className={classes.emailInfo}>
-            <p>Email</p>
             <a className={classes.email} href="mailto:info@udistrict.org">info@udistrict.org</a>
             <br></br>
           </div>

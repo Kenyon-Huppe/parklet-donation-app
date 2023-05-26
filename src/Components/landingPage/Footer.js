@@ -24,11 +24,15 @@ const Footer = ({ }) => {
             Get a custom inscription on a parklet deck board with a donation of $100 or just kick in a little bit to support our non-profit grow!
           </p>
           <div className={classes.contactInfo}>
-            <div className={classes.emailInfo}>
-              <p>Email</p>
-              <a className={classes.email} href="mailto:info@udistrict.org">info@udistrict.org</a>
-              <br></br>
-            </div>
+           <div className={classes.addressInfo}>
+          <strong>4208 University Way NE</strong>
+          <br></br>
+          <strong>Seattle WA 98105</strong>
+          </div>
+          <div className={classes.emailInfo}>
+            <a className={classes.email} href="mailto:info@udistrict.org">info@udistrict.org</a>
+            <br></br>
+          </div>
           </div>
         </div>
         <div className={classes.rightFooter}>
