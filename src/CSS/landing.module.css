@@ -343,6 +343,14 @@ a.linkcolor {
         margin-top: 50px;
         padding-left: 0px;
     }
+    .addressInfo {
+        color: var(--primary-white);
+        font-size: 15px;
+        font-family: Garamond, serif;
+        margin-top: 20px;
+        margin-right: 5px;
+    }
+    
 
     .twitter {
         width: 50px;
@@ -387,7 +395,7 @@ a.linkcolor {
         text-align: center;
         margin-left: 2%;
     }
-    .emailInfo {
+    a.email {
         color: var(--primary-white);
         font-family: Garamond, serif;
         font-size: 15px;
@@ -398,7 +406,7 @@ a.linkcolor {
         height: 130px;
         margin-top: 50px;
         margin-bottom: 50px;
-        margin-left: 5%;
+        margin-left: 12%;
         display: inline-block;
     }
     .footerSection {
